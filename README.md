@@ -62,6 +62,7 @@ Quick Reference
 [MATLAB](./docs/matlab.md)<!--rehype:style=background: rgb(0 118 168);&class=contributing-->  
 [PHP](./docs/php.md)<!--rehype:style=background: rgb(79 91 147);-->  
 [Python](./docs/python.md)<!--rehype:style=background: rgb(43 91 132);-->  
+[Pythonlib](./docs/pythonlib.md)<!--rehype:style=background: rgb(43 91 132);-->  
 [Ruby](./docs/ruby.md)<!--rehype:style=background: rgb(204 52 45);-->  
 [Rust](./docs/rust.md)<!--rehype:style=background: rgb(71 71 71);-->  
 [Swift](./docs/swift.md)<!--rehype:style=background: rgb(240 81 57);-->  
