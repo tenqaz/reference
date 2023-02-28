@@ -159,6 +159,7 @@ Quick Reference
 [CMD](./docs/cmd.md)<!--rehype:style=background: rgb(99 99 99);-->  
 [APT](./docs/apt.md)<!--rehype:style=background: rgb(30 144 255);-->  
 [tar](./docs/tar.md)<!--rehype:style=background: rgb(215 89 62);-->  
+[cmdz](./docs/cmdz.md)<!--rehype:style=background: rgb(43 91 132);-->  
 <!--rehype:class=home-card-->
 
 ## 数据库
