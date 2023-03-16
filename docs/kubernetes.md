@@ -308,6 +308,7 @@ $ kubectl run [pod_name] --image=busybox --rm -it --restart=Never -- sh
 ```bash
 $ kubectl create deploy [deploy_name] --image=nginx --dry-run -o yaml > deploy.yaml
 $ kubectl get po [pod_name] -o yaml --export > pod.yaml
+$ kubectl run nginx --image=nginx:alpine --dry-run -o -yaml > deploy.yaml
 ```
 
 ### 获取帮助

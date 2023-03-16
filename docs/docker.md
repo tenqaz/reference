@@ -17,14 +17,14 @@ $ docker run -d -p 80:80 docker/getting-started
 
 ----
 
-- `-d` - 以分离模式运行容器
-- `-p 80:80` -  将端口 80 映射到容器中的端口 80
+- `-d` - 以分离（后台）模式运行容器
+- `-p 80:80` -  将端口 80 映射到容器中的端口 80，格式：宿主机端口:容器端口
 - `docker/getting-started` - 要使用的镜像
 
-在前台创建并运行容器
+在前台创建并运行容器（之后如果要退出容器但是不关闭容器，按*Ctrl+P+Q*即可）
 
 ```shell
-$ docker run -it -p --rm 8001:8080 --name my-nginx nginx
+$ docker run -it --rm -p  8001:8080 --name my-nginx nginx
 ```
 
 ----
@@ -41,7 +41,7 @@ $ docker run -it -p --rm 8001:8080 --name my-nginx nginx
 |-------------------------------------|--------------------------------------------------|
 | `docker ps`                         | 列出正在运行的容器                                  |
 | `docker ps -a`                      | 列出所有容器                                  |
-| `docker ps -s`                      | 列出正在运行的容器 _(带 CPU / 内存)_        |
+| `docker ps -s`                      | 列出正在运行的容器 *(带 CPU / 内存)*        |
 | `docker images`                     | 列出所有镜像                                  |
 | `docker exec -it <container>  bash` | 连接到容器                                  |
 | `docker logs <container>`           | 显示容器的控制台日志                                  |
@@ -149,6 +149,7 @@ Docker 镜像
 ### 构建镜像
 
 ```shell
+# 注意有的最后面是英文 .
 $ docker build .
 $ docker build github.com/creack/docker-firefox
 $ docker build - < Dockerfile
@@ -658,6 +659,6 @@ $ docker run -d --name gitlab \
 另见
 ----
 
-- [Dockerfile 备忘清单](./dockerfile.md) _(github.io)_
-- [Docker 官方入门教程](https://docs.docker.com/get-started/) _(docker.com)_
-- [Docker入门学习笔记](https://jaywcjlove.github.io/docker-tutorial) _(github.io)_
+- [Dockerfile 备忘清单](./dockerfile.md) *(github.io)*
+- [Docker 官方入门教程](https://docs.docker.com/get-started/) *(docker.com)*
+- [Docker入门学习笔记](https://jaywcjlove.github.io/docker-tutorial) *(github.io)*
