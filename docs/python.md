@@ -8,45 +8,48 @@ Python 备忘单是 [Python 3](https://www.python.org/) 编程语言的单页参
 
 ### 介绍
 
-- [Python](https://www.python.org/)  _(python.org)_
-- [Learn X in Y minutes](https://learnxinyminutes.com/docs/python/) _(learnxinyminutes.com)_
-- [Regex in python](./regex.md#python-中的正则表达式) _(jaywcjlove.github.io)_
+- [Python 官方网站](https://www.python.org/)  _(python.org)_
+- [Python 文档](https://docs.python.org/zh-cn/3/index.html)  _(docs.python.org)_
+- [Y 分钟学会 Python](https://learnxinyminutes.com/docs/zh-cn/python-cn/) _(learnxinyminutes.com)_
+- [Python 中的正则表达式](./regex.md#python-中的正则表达式) _(jaywcjlove.github.io)_
 
-### Hello World
+### 控制台打印
 
 ```python
 >>> print("Hello, World!")
 Hello, World!
 ```
 
-Python 中著名的“Hello World”程序
+著名的“Hello World”程序在 Python 中的实现
 
 ### 变量
 
 ```python
-age = 18      # 年龄是 int 类型
-name = "John" # name 现在是 str 类型
+age = 18       # 年龄是 int 类型
+name = "John"  # 名字现在是 str 类型
 print(name)
 ```
 
-Python 不能在没有赋值的情况下声明变量
+- Python 不能在没有赋值的情况下声明变量
+- 变量可以存放不同类型的值
 
-### 数据类型
+### 内置数据类型
 <!--rehype:wrap-class=row-span-2-->
+序列指一批有序的元素，集合指一批无序且不重复的元素
 
-:-| :-
-:-| :-
-`str`                              | Text
-`int`, `float`, `complex`          | Numeric
-`list`, `tuple`, `range`           | Sequence
-`dict`                             | Mapping
-`set`, `frozenset`                 | Set
-`bool`                             | Boolean
-`bytes`, `bytearray`, `memoryview` | Binary
+| :-                                      | :-               |
+|:----------------------------------------|:-----------------|
+| `str`                                   | 文本／字符串（Text）     |
+| `int`, `float`, `complex`               | 数值（Numeric）      |
+| `dict`                                  | 映射／键值对（Mapping）  |
+| `list`, `tuple`, `range`                | 序列（Sequence）     |
+| `set`, `frozenset`                      | 集合（Set）          |
+| `bool`                                  | 布尔值／逻辑值（Boolean） |
+| `bytes`, `bytearray`, <br> `memoryview` | 二进制数据（Binary）    |
 
-查看: [Data Types](#python-数据类型)
+查看: [数据类型](#python-数据类型)
 
-### Slicing String
+### 字符串切片
 
 ```python
 >>> msg = "Hello, World!"
@@ -54,9 +57,9 @@ Python 不能在没有赋值的情况下声明变量
 llo
 ```
 
-查看: [Strings](#python-字符串)
+查看: [字符串](#python-字符串)
 
-### Lists
+### 列表
 
 ```python
 mylist = []
@@ -66,9 +69,9 @@ for item in mylist:
     print(item) # 打印输出 1,2
 ```
 
-查看: [Lists](#python-lists)
+查看: [列表](#python-列表)
 
-### If Else
+### 判断
 
 ```python
 num = 200
@@ -78,7 +81,7 @@ else:
     print("num is not greater than 0")
 ```
 
-查看: [流程控制](#python-流程控制)
+查看: [判断](#python-判断)
 
 ### 循环
 
@@ -90,7 +93,7 @@ else:
     print("Finally finished!")
 ```
 
-查看: [Loops](#python-循环)
+查看: [循环](#python-循环)
 
 ### 函数
 
@@ -102,7 +105,7 @@ else:
 来自函数的你好
 ```
 
-查看: [Functions](#函数)
+查看: [函数](#函数)
 
 ### 文件处理
 <!--rehype:wrap-class=col-span-2-->
@@ -141,7 +144,7 @@ message = "Part 1."
 message += "Part 2."   
 ```
 
-### f-字符串(Python 3.6+)
+### f-字符串 (Python 3.6+)
 
 ```python
 >>> website = 'Quick Reference'
@@ -152,7 +155,7 @@ message += "Part 2."
 '10 + 10 = 20'
 ```
 
-查看: [Python F-Strings](#python-f-字符串自-python-36-起)
+查看: [f-字符串](#python-f-字符串-python-36)
 
 Python 数据类型
 ---------------
@@ -167,17 +170,19 @@ Lorem ipsum dolor sit amet,
 consectetur adipiscing elit """
 ```
 
-查看: [Strings](#python-字符串)
+查看: [字符串](#python-字符串)
 
-### 数字
+### 数值
 
 ```python
-x = 1    # int
-y = 2.8  # float
-z = 1j   # complex
+x = 1    # 整数
+y = 2.8  # 浮点小数
+z = 1j   # 复数
 >>> print(type(x))
 <class 'int'>
 ```
+
+只要内存足够，可以容纳无限大(小)的数值
 
 ### 布尔值
 
@@ -188,7 +193,9 @@ bool(0)     # => False
 bool(1)     # => True
 ```
 
-### Lists
+bool 是 int 的子类
+
+### 列表
 
 ```python
 list1 = ["apple", "banana", "cherry"]
@@ -197,27 +204,27 @@ list3 = [1, 5, 7, 9, 3]
 list4 = list((1, 5, 7, 9, 3))
 ```
 
-查看: [Lists](#python-lists)
+查看: [列表](#python-列表)
 
-### 元组 Tuple
+### 元组
 
 ```python
 my_tuple = (1, 2, 3)
 my_tuple = tuple((1, 2, 3))
 ```
 
-类似于 List 但不可变
+类似列表，但自身不可变
 
-### Set
+### 集合
 
 ```python
 set1 = {"a", "b", "c"}   
 set2 = set(("a", "b", "c"))
 ```
 
-一组独特的项目/对象
+类似列表，但里面的元素是无序而不重复的
 
-### 字典 Dictionary
+### 字典
 
 ```python
 >>> empty_dict = {}
@@ -235,49 +242,49 @@ dict_keys(['one', 'two', 'three', 'four'])
 4
 ```
 
-Key：值对，JSON 类对象
+键-值对，一种像 JSON 那样对象
 
-### Casting
+### 类型转换
 
-#### 整数 Integers
+#### 转换为整数
 
 ```python
-x = int(1)       # x 将是 1
-y = int(2.8)     # y 将是 2
-z = int("3")     # z 将是 3
+x = int(1)       # 得到 1
+y = int(2.8)     # 得到 2
+z = int("3")     # 得到 3
 ```
 
-#### 浮点数 Floats
+#### 转换为浮点数
 
 ```python
-x = float(1)     # x 将为 1.0
-y = float(2.8)   # y 将是 2.8
-z = float("3")   # z 将为 3.0
-w = float("4.2") # w 将是 4.2
+x = float(1)     # 得到 1.0
+y = float(2.8)   # 得到 2.8
+z = float("3")   # 得到 3.0
+w = float("4.2") # 得到 4.2
 ```
 
-#### 字符串 Strings
+#### 转换为字符串
 
 ```python
-x = str("s1")    # x 将是 's1'
-y = str(2)       # y 将是 '2'
-z = str(3.0)     # z 将是 '3.0'
+x = str("s1")    # 得到 "s1"
+y = str(2)       # 得到 "2"
+z = str(3.0)     # 得到 "3.0"
 ```
 
 Python 字符串
 ------------
 
-### 类数组
+### 下标访问
 
 ```python
 >>> hello = "Hello, World"
->>> print(hello[1])
+>>> print(hello[1])  # 获取第二个字符
 e
->>> print(hello[-1])
+>>> print(hello[-1])  # 获取倒数第一个字符
 d
+>>> print(type(hello[-1]))  # 得到的还是字符串
+<class 'str'>
 ```
-
-获取位置 `1` 或最后的字符
 
 ### 循环
 
@@ -289,9 +296,9 @@ o
 o
 ```
 
-遍历单词 `foo` 中的字母
+对字符串 for-in 可以得到每个字符（类型还是字符串）
 
-### 切片字符串
+### 切割字符串
 <!--rehype:wrap-class=row-span-4-->
 
 ```java
@@ -352,7 +359,7 @@ o
 '5432154321543215432154321'
 ```
 
-### 字符串长度
+### 获取长度
 
 ```python
 >>> hello = "Hello, World!"
@@ -362,7 +369,7 @@ o
 
 `len()` 函数返回字符串的长度
 
-### 多份
+### 重复多次
 
 ```python
 >>> s = '===+'
@@ -371,7 +378,7 @@ o
 '===+===+===+===+===+===+===+===+'
 ```
 
-### 检查字符串
+### 存在性判断
 
 ```python
 >>> s = 'spam'
@@ -381,14 +388,16 @@ True
 True
 ```
 
-### 连接
+判断 "spam" 这个字符串是否在其它字符串里
+
+### 字符串拼接
 
 ```python
 >>> s = 'spam'
 >>> t = 'egg'
->>> s + t
+>>> s + t  # 可以使用加号进行拼接
 'spamegg'
->>> 'spam' 'egg'
+>>> 'spam' 'egg'  # 两个字符串之间可以省略加号
 'spamegg'
 ```
 
@@ -416,7 +425,7 @@ txt2 = "My name is {0}, I'm {1}".format("John", 36)
 txt3 = "My name is {}, I'm {}".format("John", 36)
 ```
 
-### Input 输入
+### 控制台输入
 
 ```python
 >>> name = input("Enter your name: ")
@@ -427,36 +436,43 @@ Enter your name: Tom
 
 从控制台获取输入数据
 
-### Join 加入
+### 插入分隔符拼接
 
 ```python
->>> "#".join(["John", "Peter", "Vicky"])
-'John#Peter#Vicky'
+>>> "、".join(["John", "Peter", "Vicky"])
+'John、Peter、Vicky'
 ```
 
-### Endswith 以..结束
+### 头尾判断
 
 ```python
+>>> # 是否以 H 开头
+>>> "Hello, world!".endswith("H")
+True
+>>> # 是否以 h 开头
+>>> "Hello, world!".endswith("h")
+False
+>>> # 是否以 ! 结尾
 >>> "Hello, world!".endswith("!")
 True
 ```
 
 ### 转义符号
 
-| 转义符号 | 对应的操作 |
-|---|---|
-| `\\` | 输出反斜杠 |
-| `\'` | 输出单引号 |
-| `\"` | 输出双引号 |
-| `\n` | 换行 |
-| `\t` | 水平制表符 |
+| 转义符号 | 对应的操作  |
+|------|--------|
+| `\\` | 输出反斜杠  |
+| `\'` | 输出单引号  |
+| `\"` | 输出双引号  |
+| `\n` | 换行     |
+| `\t` | 水平制表符  |
 | `\r` | 光标回到首位 |
-| `\b` | 退格 |
+| `\b` | 退格     |
 
-Python F 字符串（自 Python 3.6+ 起）
+Python f-字符串 (Python 3.6+)
 ----------------
 
-### f-Strings 用法
+### f-字符串 用法
 <!--rehype:wrap-class=row-span-2-->
 
 ```python
@@ -480,38 +496,38 @@ Python F 字符串（自 Python 3.6+ 起）
 "Hello!\n    I'm Eric.\n    I'm 27."
 ```
 
-它从 Python 3.6 开始可用，另见: [格式化的字符串文字](https://docs.python.org/3/reference/lexical_analysis.html#f-strings)
+它从 Python 3.6 开始可用，另见: [格式字符串字面值](https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#f-strings)
 
-### f-Strings 填充对齐
+### 填充对齐
 
 ```python
->>> f'{"text":10}'   # [宽度]
+>>> f'{"text":10}'   # 使用空格填充到指定长度
 'text      '
 >>> f'{"test":*>10}' # 向左填充
 '******test'
 >>> f'{"test":*<10}' # 向右填充
 'test******'
->>> f'{"test":*^10}' # 填充中心
+>>> f'{"test":*^10}' # 居中填充
 '***test***'
->>> f'{12345:0>10}'  # 填写数字
+>>> f'{12345:0>10}'  # 使用数字填充
 '0000012345'
 ```
 
-### f-Strings 类型
+### 按类型输出
 <!--rehype:wrap-class=row-span-2-->
 
 ```python
->>> f'{10:b}'     # binary 二进制类型
+>>> f'{10:b}'     # 输出二进制数值
 '1010'
->>> f'{10:o}'     # octal 八进制类型
+>>> f'{10:o}'     # 输出八进制数值
 '12'
->>> f'{200:x}'    # hexadecimal 十六进制类型
+>>> f'{200:x}'    # 输出十六进制数值
 'c8'
 >>> f'{200:X}'
 'C8'
 >>> f'{345600000000:e}' # 科学计数法
 '3.456000e+11'
->>> f'{65:c}'       # 字符类型
+>>> f'{65:c}'       # 将整数转化为一个字符后输出
 'A'
 >>> f'{10:#b}'      # [类型] 带符号（基础）
 '0b1010'
@@ -521,20 +537,20 @@ Python F 字符串（自 Python 3.6+ 起）
 '0xa'
 ```
 
-### F-Strings Sign
+### 显示正负号
 
 ```python
->>> f'{12345:+}'      # [sign] (+/-)
+>>> f'{12345:+}'      # 显示正数的正号
 '+12345'
->>> f'{-12345:+}'
+>>> f'{-12345:+}'     # 显示负数的负号
 '-12345'
->>> f'{-12345:+10}'
+>>> f'{-12345:+10}'   # 显示负号，并使用空格填充，直到长度为 10
 '    -12345'
->>> f'{-12345:+010}'
+>>> f'{-12345:+010}'  # 显示负号，并使用0填充，直到长度为 10
 '-000012345'
 ```
 
-### F-Strings 其它
+### 其它
 
 ```python
 >>> f'{-12345:0=10}'  # 负数
@@ -558,7 +574,7 @@ Python F 字符串（自 Python 3.6+ 起）
 '25%'
 ```
 
-Python Lists
+Python 列表
 ------------
 
 ### 定义
@@ -592,7 +608,7 @@ Python Lists
 [6, 7]
 ```
 
-### 添加
+### 添加元素
 
 ```python
 >>> li = []
@@ -610,7 +626,7 @@ Python Lists
 [1, 2, 4, 3]
 ```
 
-### List 切片
+### 切片
 <!--rehype:wrap-class=col-span-2 row-span-3-->
 
 列表切片的语法：
@@ -649,7 +665,7 @@ a_list[start:end:step]
 ['spam', 'egg', 'bacon', 'tomato', 'ham', 'lobster']
 ```
 
-#### 跳跃索引
+#### 间隔索引
 
 ```python
 ['spam', 'egg', 'bacon', 'tomato', 'ham', 'lobster']
@@ -676,6 +692,9 @@ a_list[start:end:step]
 >>> del li[0]
 >>> li
 ['butter']
+>>> li.remove('butter')
+>>> li
+[]
 ```
 
 ### 列表边界
@@ -734,10 +753,24 @@ IndexError: list index out of range
 ['re', 're', 're']
 ```
 
-Python 流程控制
+### 搜索
+  
+```python
+>>> nums = [40, 36, 89, 2, 36, 100, 7, -20.5, -999]
+>>> nums.index(2)
+3
+>>> nums.index(100, 3, 7)  # 搜索3-7之间的元素
+5
+>>> nums.index(7, 4) # 搜索4之后的元素
+6
+```  
+
+当寻找一个不存在的值时，抛出`ValueError`。
+  
+Python 判断
 ------------
 
-### 基本
+### 一般形式
 
 ```python
 num = 5
@@ -749,7 +782,7 @@ else:
     print("num is indeed 10.")
 ```
 
-### 一行
+### 单行形式
 
 ```python
 >>> a = 330
@@ -759,22 +792,12 @@ else:
 a
 ```
 
-### else if
-
-```python
-value = True
-if not value:
-    print("Value is False")
-elif value is None:
-    print("Value is None")
-else:
-    print("Value is True")
-```
+注意条件是放在中间的
 
 Python 循环
 --------
 
-### 基础
+### 一般形式
 
 ```python
 primes = [2, 3, 5, 7]
@@ -782,7 +805,7 @@ for prime in primes:
     print(prime)
 ```
 
-### 有索引
+### 带索引
 
 ```python
 animals = ["dog", "cat", "mouse"]
@@ -790,7 +813,7 @@ for i, value in enumerate(animals):
     print(i, value)
 ```
 
-### While
+### while 循环
 
 ```python
 x = 0
@@ -799,7 +822,7 @@ while x < 4:
     x += 1  # Shorthand for x = x + 1
 ```
 
-### Break
+### 跳出循环
 
 ```python
 x = 0
@@ -810,7 +833,7 @@ for index in range(10):
     print(x)
 ```
 
-### Continue
+### 跳过一轮循环
 
 ```python
 for index in range(3, 8): 
@@ -820,7 +843,7 @@ for index in range(3, 8):
     print(x)
 ```
 
-### 范围
+### 范围循环
 
 ```python
 for i in range(4):
@@ -840,7 +863,7 @@ for n, a in zip(name, age):
     print('%s is %d years old' %(n, a))
 ```
 
-### 列表理解
+### 列表生成式
 <!--rehype:wrap-class=col-span-2-->
 
 ```python
@@ -877,6 +900,8 @@ def varargs(*args):
 varargs(1, 2, 3)  # => (1, 2, 3)
 ```
 
+args 的类型是 tuple
+
 ### 关键字参数
 
 ```python
@@ -885,6 +910,8 @@ def keyword_args(**kwargs):
 # => {"big": "foot", "loch": "ness"}
 keyword_args(big="foot", loch="ness")
 ```
+
+kwargs 的类型是 dict
 
 ### 返回多个
 
@@ -932,13 +959,13 @@ print(ceil(3.7))   # => 4.0
 print(floor(3.7))  # => 3.0
 ```
 
-### 全部导入
+### 导入一个模块的全部
 
 ```python
 from math import *
 ```
 
-### 缩短模块
+### 给模块起别名
 
 ```python
 import math as m
@@ -946,7 +973,7 @@ import math as m
 math.sqrt(16) == m.sqrt(16)
 ```
 
-### 功能和属性
+### 浏览模块的函数和属性
 
 ```python
 import math
@@ -976,7 +1003,7 @@ for i, line in enumerate(file, start=1):
 
 ### 字符串
 
-#### 写一个字符串
+#### 写入一个字符串
 
 ```python
 contents = {"aa": 12, "bb": 21}
@@ -1037,12 +1064,12 @@ os.rmdir("myfolder")
 Python 类和继承
 --------
 
-### Defining
+### 定义
 
 ```python
 class MyNewClass:
     pass
-# Class Instantiation
+# 类的实例化
 my = MyNewClass()
 ```
 
@@ -1086,7 +1113,7 @@ x = MyClass()
 print(x.class_variable)
 ```
 
-### Super() 函数
+### super() 函数
 <!--rehype:wrap-class=row-span-2-->
 
 ```python
@@ -1149,7 +1176,7 @@ obj_A.print_self() # => A
 obj_B.print_self() # => B
 ```
 
-### 覆盖
+### 重写
 
 ```python
 class ParentClass:
@@ -1180,6 +1207,182 @@ Yoki = Dog("Yoki", 4)
 print(Yoki.name) # => YOKI
 print(Yoki.legs) # => 4
 Yoki.sound()     # => Woof!
+```
+
+Python 类型标注 (Python 3.5+)
+--------
+
+### 变量
+
+```python
+string: str = "ha"
+times: int = 3
+
+print(string * times)  # => hahaha
+```
+
+### 变量
+
+```python
+result: str = 1 + 2
+
+print(result)  # => 3
+```
+
+错误的类型标注不会影响正常运行，也不会报错
+
+### 参数
+
+```python
+def say(name: str, start: str = "Hi"):
+    return start + ", " + name
+
+print(say("Python"))  # => Hi, Python
+```
+
+### 位置参数
+
+```python
+def calc_summary(*args: int):
+    return sum(args)
+
+print(calc_summary(3, 1, 4))  # => 8
+```
+
+表示 args 的所有元素都是 int 类型的。
+
+### 返回值
+
+```python
+def say_hello(name) -> str:
+    return "Hello, " + name
+
+var = "Python"
+print(say_hello(var))  # => Hello, Python
+```
+
+### 多种可能的返回值
+
+```python
+from typing import Union
+
+def resp200(meaningful) -> Union[int, str]:
+    return "OK" if meaningful else 200
+```
+
+表示返回值可能是 int，也可能是 str 。
+
+### 关键字参数
+
+```python
+def calc_summary(**kwargs: int):
+    return sum(kwargs.values())
+
+print(calc_summary(a=1, b=2))  # => 3
+```
+
+表示 kwargs 的所有值都是 int 类型的。
+
+### 多个返回值
+
+```python
+def resp200() -> (int, str):
+    return 200, "OK"
+```
+
+### 多种可能的返回值 (3.10+)
+
+```python
+def resp200(meaningful) -> int | str:
+    return "OK" if meaningful else 200
+```
+
+自 Python 3.10 起可用。
+
+### 属性
+
+```python
+class Employee:
+    name: str
+    age: int
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        self.graduated: bool = False
+```
+
+### 标注自己
+
+```python
+class Employee:
+    name: str
+    age: int
+
+    def set_name(self, name) -> "Employee":
+        self.name = name
+        return self
+```
+
+这里表示 set_name() 返回了一个 Employee 对象。
+
+### 标注自己 (3.11+)
+
+```python
+from typing import Self
+
+class Employee:
+    name: str
+    age: int
+
+    def set_name(self: Self, name) -> Self:
+        self.name = name
+        return self
+```
+
+### 标注一个值为类型的参数
+<!--rehype:wrap-class=col-span-2-->
+```python
+from typing import TypeVar, Type
+
+T = TypeVar("T")
+
+# "mapper" 的值是一个像 int、str、MyClass 这样的类型
+# "default" 是一个 T 类型的值，比如 314、"string"、MyClass()
+# 函数的返回值也是一个 T 类型的值
+def converter(raw, mapper: Type[T], default: T) -> T:
+    try:
+        return mapper(raw)
+    except:
+        return default
+
+raw: str = input("请输入一个整数：")
+result: int = converter(raw, mapper=int, default=0)
+```
+
+### 标注一个值为函数的参数
+<!--rehype:wrap-class=col-span-2-->
+
+```python
+from typing import TypeVar, Callable, Any
+
+T = TypeVar("T")
+
+def converter(raw, mapper: Callable[[Any], T], default: T) -> T:
+    try:
+        return mapper(raw)
+    except:
+        return default
+
+# Callable[[Any], T] 表示值是一个像这样声明的函数:
+# def anynomous(arg: Any) -> T:
+#     pass
+
+def is_success(value) -> bool:
+    return value in (0, "OK", True, "success")
+
+resp = dict(code=0, message="OK", data=[])
+successed: bool = converter(resp.message, mapper=is_success, default=False)
 ```
 
 各种各样的
@@ -1248,6 +1451,7 @@ finally:                 # 在所有情况下执行
 另见
 ----
 
-- [Python](https://www.python.org/)  _(python.org)_
-- [Learn X in Y minutes](https://learnxinyminutes.com/docs/python/) _(learnxinyminutes.com)_
-- [Regex in python](./regex.md#python-中的正则表达式) _(jaywcjlove.github.io)_
+- [Python 官方网站](https://www.python.org/)  _(python.org)_
+- [Python 文档](https://docs.python.org/zh-cn/3/index.html)  _(docs.python.org)_
+- [Y 分钟学会 Python](https://learnxinyminutes.com/docs/zh-cn/python-cn/) _(learnxinyminutes.com)_
+- [Python 中的正则表达式](./regex.md#python-中的正则表达式) _(jaywcjlove.github.io)_
