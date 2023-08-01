@@ -126,6 +126,7 @@ Quick Reference
 
 ## 命令
 
+[cmdz](./docs/cmdz.md)<!--rehype:style=background: rgb(43 91 132);-->
 [ADB, Android Debug Bridge](./docs/adb.md)<!--rehype:style=background: rgb(238 0 0);&class=contributing tag&data-lang=Android&data-info=👆看看还缺点儿什么？-->  
 [Ansible](./docs/ansible.md)<!--rehype:style=background: rgb(238 0 0);&class=contributing tag&data-lang=RedHat&data-info=👆看看还缺点儿什么？-->  
 [Awk](./docs/awk.md)<!--rehype:style=background: rgb(16 185 129);-->  
@@ -167,7 +168,6 @@ Quick Reference
 [tar](./docs/tar.md)<!--rehype:style=background: rgb(215 89 62);--> 
 [pacman](./docs/pacman.md)<!--rehype:style=background: rgb(24 147 209);&class=tag&data-lang=archlinux&class=contributing-->  
 [Linux Command](./docs/linux-command.md)<!--rehype:style=background: rgb(215 89 62);&class=tag&data-lang=命令速查-->   
-[cmdz](./docs/cmdz.md)<!--rehype:style=background: rgb(43 91 132);-->  
 <!--rehype:class=home-card-->
 
 ## 数据库
